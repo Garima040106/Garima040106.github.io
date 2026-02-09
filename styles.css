@@ -564,7 +564,7 @@ header {
 
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
 }
 
@@ -605,16 +605,16 @@ header {
 .exp-header h3 {
     margin: 0;
     color: var(--text-dark);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .exp-badge {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
     color: white;
-    padding: 6px 14px;
+    padding: 6px 12px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     white-space: nowrap;
     flex-shrink: 0;
@@ -623,31 +623,15 @@ header {
 .exp-company {
     color: var(--accent-color);
     font-weight: 600;
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
-.exp-details {
-    list-style: none;
-    margin: 0;
-}
-
-.exp-details li {
+.exp-description {
     color: var(--text-light);
-    padding: 0.7rem 0;
-    padding-left: 1.8rem;
-    position: relative;
+    margin: 0;
     font-size: 0.95rem;
     line-height: 1.6;
-}
-
-.exp-details li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-weight: bold;
-    font-size: 1.1rem;
 }
 
 /* ==================== EDUCATION SECTION ==================== */
