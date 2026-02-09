@@ -292,6 +292,38 @@ section h2 {
     margin-bottom: 0;
 }
 
+/* Languages Section */
+.languages {
+    background-color: #f8f9fa;
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.language-item {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.language-item h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.proficiency {
+    color: #0a66c2;
+    font-weight: 500;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
 /* Contact Section */
 .contact {
     background-color: #f8f9fa;
