@@ -562,106 +562,92 @@ header {
     background-color: var(--bg-light);
 }
 
-.experience-timeline {
+.experience-grid {
     display: grid;
-    gap: 2rem;
-    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
-.experience-timeline::before {
+.exp-card {
+    padding: 2.5rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.exp-card::before {
     content: '';
     position: absolute;
-    left: 30px;
     top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, var(--accent-color) 0%, var(--accent-dark) 100%);
-}
-
-.timeline-item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 2rem;
-    position: relative;
-}
-
-.timeline-marker {
-    width: 60px;
-    height: 60px;
-    background: white;
-    border: 3px solid var(--accent-color);
-    border-radius: 50%;
-    position: absolute;
     left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0 8px rgba(6, 182, 212, 0.1);
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-dark) 100%);
 }
 
-.timeline-content {
-    padding: 2rem;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    margin-top: 0.5rem;
-    transition: var(--transition);
-}
-
-.timeline-content:hover {
-    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+.exp-card:hover {
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
     border-color: var(--accent-color);
+    transform: translateY(-5px);
 }
 
-.role-title {
+.exp-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
     gap: 1rem;
 }
 
-.role-title h3 {
+.exp-header h3 {
     margin: 0;
+    color: var(--text-dark);
+    font-size: 1.3rem;
 }
 
-.role-badge {
+.exp-badge {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
     color: white;
-    padding: 4px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.company {
+.exp-company {
     color: var(--accent-color);
     font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
 }
 
-.role-description {
+.exp-details {
     list-style: none;
     margin: 0;
 }
 
-.role-description li {
+.exp-details li {
     color: var(--text-light);
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
+    padding: 0.7rem 0;
+    padding-left: 1.8rem;
     position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-.role-description li::before {
-    content: '✓';
+.exp-details li::before {
+    content: '→';
     position: absolute;
     left: 0;
     color: var(--accent-color);
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* ==================== EDUCATION SECTION ==================== */
@@ -935,6 +921,11 @@ footer {
     }
 
     .role-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exp-header {
         flex-direction: column;
         align-items: flex-start;
     }
