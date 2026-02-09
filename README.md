@@ -1,10 +1,10 @@
-# Garima's Portfolio
+# Garima Varma - Portfolio
 
-Welcome to my personal portfolio website!
+Welcome to my personal portfolio website! This site showcases my skills, experience, and projects in full-stack web development.
 
 ## About
 
-This is my GitHub Pages portfolio showcasing my projects and skills.
+I'm a passionate full-stack developer with expertise in Python, JavaScript, React, and Node.js. This portfolio highlights my technical skills, professional experience, and educational background.
 
 ## Website Features
 
