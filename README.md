@@ -1,49 +1,51 @@
-# Garima Varma - Portfolio
+# Garima Varma Portfolio
 
-Welcome to my personal portfolio website! This site showcases my skills, experience, and projects in full-stack web development.
+This repository contains the source for Garima Varma's personal portfolio website. It is a lightweight static site built with plain HTML, CSS, and JavaScript, and designed to present her work in AI, cybersecurity, entrepreneurship, and product leadership.
 
-## About
+## Overview
 
-I'm a passionate full-stack developer with expertise in Python, JavaScript, React, and Node.js. This portfolio highlights my technical skills, professional experience, and educational background.
+The site includes:
 
-## Website Features
+- A clear professional landing section
+- An about section focused on current work and academic background
+- Experience highlights for VeerNeo, DSU Entrepreneurship Cell, and cybersecurity studies
+- Education, certifications, and skills
+- A responsive layout with a mobile navigation menu
+- A direct link to the latest resume PDF
 
-- Responsive design
-- Smooth navigation
-- Project showcase
-- Contact section
-- Modern UI with CSS gradients and animations
+## Project Structure
 
-## File Structure
-
+```text
+.
+|-- index.html
+|-- styles.css
+|-- script.js
+|-- Garima Varma Resume.pdf
+|-- README.md
+`-- .github/
+    `-- workflows/
+        `-- deploy.yml
 ```
-├── index.html      # Main HTML file
-├── styles.css      # Stylesheet
-├── script.js       # JavaScript functionality
-├── README.md       # This file
-└── .gitignore      # Git ignore file
-```
 
-## Local Development
+## Local Preview
 
-1. Clone this repository
-2. Open `index.html` in your web browser
-3. Make changes as needed
+Open `index.html` in a browser to preview the site locally.
 
 ## Deployment
 
-This site is hosted on GitHub Pages at: https://garima040106.github.io
+This repository is intended to be published with GitHub Pages.
 
-## Technologies Used
+- Repository: `Garima040106/Garima040106.github.io`
+- Expected URL: `https://garima040106.github.io`
+
+If GitHub Pages shows a 404, check `Settings > Pages` and confirm the site is configured to deploy from `GitHub Actions`.
+
+## Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- Vanilla JavaScript
 
-## Author
+## Notes
 
-Garima
-
-## License
-
-This project is open source and available under the MIT License.
+The site uses a light visual style, responsive breakpoints for mobile screens, and no frontend build tooling.
