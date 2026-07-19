@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  /* Light, warm, understated palette — beige/cream base, soft borders,
+     one quiet olive accent. Category tags are muted earth tones close
+     in saturation and lightness so the page reads calm, not busy. */
+  --color-ink: #f8f3ea;
+  --color-ink-panel: #fffdf8;
+  --color-ink-panel-soft: #f1ead9;
+  --color-paper: #2b2620;
+  --color-muted: #6e6353;
+  --color-muted-dim: #948972;
+  --color-accent: #746a3f;
+  --color-accent-dim: #5b532f;
+  --color-line: #e7ddc7;
+  --color-line-strong: #d3c39f;
+
+  --color-tag-interview: #6b7d8c;
+  --color-tag-ctf: #a9724a;
+  --color-tag-hackathon: #8a8054;
+  --color-tag-article: #74815f;
+  --color-tag-research: #8a6f7f;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
