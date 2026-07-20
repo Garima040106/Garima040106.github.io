@@ -1,5 +1,6 @@
 import Reveal from "./Reveal"
 import SectionHeading from "./SectionHeading"
+import Collapsible from "./Collapsible"
 
 const coursework = [
   "Data Structures & Algorithms",
@@ -11,17 +12,21 @@ const coursework = [
 
 export default function About() {
   return (
-    <section id="about" className="max-w-5xl mx-auto px-6 py-20 border-t border-line">
+    <div id="about">
       <Reveal>
         <SectionHeading eyebrow="Education" title="Dayananda Sagar University" />
       </Reveal>
 
       <Reveal delay={0.05}>
-        <div className="rounded-2xl border border-line p-6 sm:p-8 bg-ink-panel">
-          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-4">
-            <p className="text-lg">B.Tech in Computer Science and Engineering (Cybersecurity)</p>
-            <p className="font-mono text-xs text-muted-dim">2024 — 2028</p>
-          </div>
+        <Collapsible
+          className="bg-ink-panel"
+          header={
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <p className="text-lg">B.Tech CSE (Cybersecurity)</p>
+              <p className="font-mono text-xs text-muted-dim">2024 — 2028</p>
+            </div>
+          }
+        >
           <p className="font-mono text-xs uppercase tracking-wider text-muted-dim mb-3">
             Relevant coursework
           </p>
@@ -35,8 +40,8 @@ export default function About() {
               </span>
             ))}
           </div>
-        </div>
+        </Collapsible>
       </Reveal>
-    </section>
+    </div>
   )
 }

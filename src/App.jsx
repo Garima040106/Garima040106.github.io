@@ -15,12 +15,20 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
-        <About />
-        <Experience />
+        <section className="max-w-5xl mx-auto px-6 py-12 sm:py-16 border-t border-line">
+          <div className="grid sm:grid-cols-2 gap-10 sm:gap-12">
+            <About />
+            <Experience />
+          </div>
+        </section>
         <Projects />
         <Skills />
-        <Research />
-        <Certifications />
+        <section className="max-w-5xl mx-auto px-6 py-12 sm:py-16 border-t border-line">
+          <div className="grid sm:grid-cols-2 gap-10 sm:gap-12">
+            <Research />
+            <Certifications />
+          </div>
+        </section>
         <FieldNotes />
       </main>
       <Footer />

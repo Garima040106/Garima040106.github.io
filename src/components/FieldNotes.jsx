@@ -20,7 +20,7 @@ function NoteCard({ note, delay }) {
   return (
     <Reveal delay={delay}>
       <div
-        className="rounded-2xl border border-line overflow-hidden"
+        className="rounded-2xl border-[1.5px] border-line-strong overflow-hidden"
         style={{ borderLeftWidth: "3px", borderLeftColor: `var(--color-${color})` }}
       >
         <button
@@ -100,22 +100,15 @@ export default function FieldNotes() {
   const sorted = [...notes].sort((a, b) => new Date(b.date) - new Date(a.date))
 
   return (
-    <section id="notes" className="max-w-5xl mx-auto px-6 py-20 border-t border-line">
+    <section id="notes" className="max-w-5xl mx-auto px-6 py-12 sm:py-16 border-t border-line">
       <Reveal>
         <SectionHeading
           eyebrow="Log"
           title="Field Notes"
         />
       </Reveal>
-      <Reveal delay={0.03} className="mb-8 -mt-6">
-        <p className="text-sm text-muted-dim max-w-lg">
-          Notes on interviews, CTFs, and hackathons, added as they happen.
-          New entries go in <code className="font-mono text-xs">src/data/notes.js</code> — nothing
-          else needs to change.
-        </p>
-      </Reveal>
 
-      <div className="space-y-4">
+      <div className="space-y-3">
         {sorted.map((note, i) => (
           <NoteCard key={note.id} note={note} delay={i * 0.05} />
         ))}

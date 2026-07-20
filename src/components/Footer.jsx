@@ -9,7 +9,7 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="max-w-5xl mx-auto px-6 py-20 border-t border-line">
+    <footer id="contact" className="max-w-5xl mx-auto px-6 py-12 sm:py-16 border-t border-line">
       <Reveal>
         <p className="font-mono text-xs uppercase tracking-widest text-accent mb-3">Get in touch</p>
         <h2 className="font-display text-3xl mb-8 max-w-md">
@@ -22,7 +22,7 @@ export default function Footer() {
               href={l.href}
               target={l.href.startsWith("http") ? "_blank" : undefined}
               rel={l.href.startsWith("http") ? "noreferrer" : undefined}
-              className="px-4 py-2 rounded-full border border-line-strong hover:border-accent hover:text-accent transition-colors"
+              className="px-4 py-2.5 rounded-full border border-line-strong hover:border-accent hover:text-accent transition-colors"
             >
               {l.label}
             </a>

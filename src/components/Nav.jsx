@@ -36,7 +36,7 @@ export default function Nav() {
         </nav>
 
         <button
-          className="sm:hidden font-mono text-xs uppercase tracking-wider text-muted"
+          className="sm:hidden font-mono text-xs uppercase tracking-wider text-muted py-3 px-1 -mx-1"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label="Toggle menu"
@@ -46,13 +46,13 @@ export default function Nav() {
       </div>
 
       {open && (
-        <nav className="sm:hidden px-6 pb-6 flex flex-col gap-4 font-mono text-sm uppercase tracking-wider text-muted">
+        <nav className="sm:hidden px-6 pb-6 flex flex-col font-mono text-sm uppercase tracking-wider text-muted">
           {LINKS.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="hover:text-paper">
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="hover:text-paper py-2.5">
               {l.label}
             </a>
           ))}
-          <a href="/resume.pdf" onClick={() => setOpen(false)} className="text-accent">
+          <a href="/resume.pdf" onClick={() => setOpen(false)} className="text-accent py-2.5">
             Resume
           </a>
         </nav>
