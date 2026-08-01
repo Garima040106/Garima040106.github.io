@@ -1,5 +1,15 @@
 export const projects = [
   {
+  title: "Public Grievance Tracker",
+  link: "https://github.com/Garima040106/public-grievance-tracker",
+  stack: ["React", "Django REST Framework", "MySQL"],
+  summary: "A full-stack grievance tracking platform with hardened auth, a lean frontend build, and CI-backed test coverage.",
+  bullets: [
+    "Identified and fixed an authentication bypass and a PII-enumeration flaw in the DRF backend, tightening access control across the API.",
+    "Cut the production JS bundle by roughly 74% through code-splitting and dependency cleanup, and built out a 25-test suite wired into GitHub Actions CI.",
+  ],
+},
+  {
     title: "Web Vulnerability Scanner",
     link: "https://github.com/Garima040106/web-vulnerability-scanner-django",
     stack: ["Python", "Django", "FastAPI", "Docker"],
